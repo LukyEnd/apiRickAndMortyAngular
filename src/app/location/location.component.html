@@ -1,0 +1,16 @@
+<div>
+    <h1>Aqui ficam as Localizações</h1>
+    <div>
+        <div *ngFor="let character of locationSuccess">
+            <li>{{character.id}}</li>
+            <li>{{character.name}}</li>
+            <li>{{character.type}}</li>
+            <li>{{character.dimension}}</li>
+            <!-- <li>{{character.residents}}</li> -->
+            <li>{{character.url}}</li>
+            <li>{{character.created}}</li>
+        </div>
+    </div>
+</div>
+
+<!-- {{locationSuccess | json}} -->

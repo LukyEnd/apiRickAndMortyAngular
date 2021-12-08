@@ -1,0 +1,108 @@
+//configuração, cor, etc de cada div
+div {
+    background-color: #6c7a89;
+    float: left; //Deixar um lado a lado
+    border: 2px solid rgb(0, 0, 0);
+    padding: 20px;
+    margin: 5px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    div {
+        background-color: rgba(31, 31, 31, 0.582);
+        padding: 20px;
+        width: 90vw;
+        border: 1px solid rgb(0, 0, 0);
+        div {
+            background-color: rgb(31, 28, 28);
+            border: 1px solid black;
+            padding: 10px;
+            min-width: 300px;
+            width: 30%;
+            height: 40%;
+            border-radius: 10px;
+        }
+    }
+}
+
+//Configuração de todas imagens, como borda
+img {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+//Personalização de todos os H1 da pagina
+h1 {
+    background-color: rgb(31, 28, 28);
+    color: antiquewhite;
+    text-align: center;
+}
+
+//Tamanho de Cada Cart contendo imagens e texto, nomes,  etc..
+mat-card {
+    height: 200px;
+    max-width: 400px;
+    margin-bottom: 8px;
+}
+
+//Configuração do botao ver mais
+mat-card-content {
+    position: absolute;
+    left: 97%;
+    top: 95%;
+    margin-left: -110px;
+    margin-top: -40px;
+}
+
+//Cor e formato de todos os Botões, do rodapé e do "ver mais"
+button {
+    background: #069cc2;
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+}
+
+//cor do cabeçalhoo
+header {
+    background-color: rgb(31, 28, 28);
+}
+
+//Centralização do botao de baixo e de cima
+.button-low,
+.button-up {
+    text-align: center;
+}
+
+//DISTANCIA dos botão avanço e retorno no rodapé
+.page-next,
+.page-prev {
+    margin-right: 20px;
+}
+
+//tamanho e distancia entre os botões home,episode e location
+.page-home,
+.page-location,
+.page-episode {
+    margin-right: 10px;
+    width: 15%;
+    height: 100%;
+}
+
+//Efeito ao Colocar mause encima do botão OBS.: Apenas do VER MAIS
+.button-mast:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(31, 31, 31, 0.582);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    //text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}

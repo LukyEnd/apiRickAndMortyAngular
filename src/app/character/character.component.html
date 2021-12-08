@@ -1,0 +1,36 @@
+<header class="button-up">
+    <a href="/character"><button class="page-home">Home</button></a>
+    <a href="/episode"><button class="page-episode">Episodios</button></a>
+    <a href="/location"><button class="page-location">Localizações</button></a>
+</header>
+<div>
+    <div>
+        <h1>Lista de Personagens</h1>
+        <div *ngFor="let character of charSuccess">
+            <mat-card>
+                <mat-card-title-group>
+                    <mat-card-title>
+                        {{character.name}}
+                    </mat-card-title>
+                    <mat-card-subtitle></mat-card-subtitle>
+                    <mat-card-subtitle>
+                        <b>{{character.status}} - {{character.species}}</b>
+                    </mat-card-subtitle>
+                    <mat-card-subtitle>
+                        Ultima Localiação: <p><b>{{character.location.name}}</b></p>
+                    </mat-card-subtitle>
+                    <mat-card-subtitle>Visto pela primeira Vez: <p><b>{{character.gender}}</b></p>
+                    </mat-card-subtitle>
+                    <img mat-card-lg-image src="{{character.image}}">
+                </mat-card-title-group>
+                <mat-card-content>
+                    <button mat-button class="button-mast" (click)="openDialog(character)">Ver Mais...</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <div class="button-low">
+        <button (click)="pageInfo()" class="page-next">Anterior</button>
+        <button (click)="pageInfo()" class="paga-prev">Proxima</button>
+    </div>
+</div>
