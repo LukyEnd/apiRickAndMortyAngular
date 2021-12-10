@@ -1,0 +1,33 @@
+//Cor e formato de todos os Botões, do rodapé e do "ver mais"
+button {
+    background: #069cc2;
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+}
+
+//DISTANCIA dos botão avanço e retorno no rodapé
+.page-next,
+.page-prev {
+    margin-right: 20px;
+}
+
+//tamanho e distancia entre os botões home,episode e location
+.page-home,
+.page-location,
+.page-episode {
+    margin-right: 10px;
+    width: 15%;
+    height: 100%;
+}
+
+//Centralização do botao de baixo e de cima
+.button-low,
+.button-up,
+.footer,
+.header {
+    text-align: center;
+}

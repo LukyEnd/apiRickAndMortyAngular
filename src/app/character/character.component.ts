@@ -13,7 +13,7 @@ import { ReadCharacterComponent } from './read-character/read-character.componen
 export class CharacterComponent implements OnInit {
   charSuccess!: ApiCharacterModel[];
   charErro!: string;
-  currentUrl!: string
+  currentUrl!: string;
 
   constructor(private serv: ServiceService, public dialog: MatDialog, public resp: ResponseService) { }
 
@@ -59,6 +59,6 @@ export class CharacterComponent implements OnInit {
 
   openDialog(character: ApiCharacterModel): ApiCharacterModel {
     this.dialog.open(ReadCharacterComponent);
-    return this.resp.setCharacterInfo(character)
+    return this.resp.setCharacterInfo(character);
   }
 }

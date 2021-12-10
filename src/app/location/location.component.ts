@@ -1,5 +1,5 @@
-import { ApiLocationModel } from '../model/location.model';
 import { Component, OnInit } from '@angular/core';
+import { ApiLocationModel } from '../model/location.model';
 import { ServiceService } from '../service/service.service';
 
 @Component({
@@ -54,5 +54,4 @@ export class LocationComponent implements OnInit {
         this.locationError = erro
       })
   }
-
 }

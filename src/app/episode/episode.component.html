@@ -1,15 +1,15 @@
 <div>
-    <div class="header">
-        <a href="/character"><button class="page-home">Personagens</button></a>
-        <a href="/episode"><button class="page-episode">Episodios</button></a>
-        <a href="/location"><button class="page-location">Localizações</button></a>
+    <div>
+        <app-header></app-header>
     </div>
     <div>
         <h1>Episodios</h1>
         <div *ngFor="let episode of episodeSuccess">
-            <li><b>ID: </b>{{episode.id}}</li>
+            <li>
+                <h2>Ep. {{episode.name}}</h2>
+            </li>
             <p></p>
-            <li><b>Nome do Ep.: </b>{{episode.name}}</li>
+            <li><b>ID: </b>{{episode.id}}</li>
             <p></p>
             <li><b>Data de Lançamento: </b>{{episode.air_date}}???</li>
             <p></p>
@@ -25,5 +25,8 @@
     <div class="footer">
         <button (click)="pagePrevInfo()" class="page-next">Anterior</button>
         <button (click)="pageNextInfo()" class="paga-prev">Proxima</button>
+        <!-- LOOP Infinito, arrumar -->
+        <!-- <app-footer [pageNextInfo]="pageNextInfo()"></app-footer> -->
+        <!-- <app-footer [pagePrevInfo]="pagePrevInfo()"></app-footer> -->
     </div>
 </div>

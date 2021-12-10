@@ -1,7 +1,7 @@
-import { ApiEpisodeModel } from '../model/episode.model';
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../service/service.service';
+import { ApiEpisodeModel } from '../model/episode.model';
 import { ResponseService } from '../service/character-info.service';
+import { ServiceService } from '../service/service.service';
 
 @Component({
   selector: 'app-episode',
@@ -54,5 +54,4 @@ export class EpisodeComponent implements OnInit {
         this.episodeError = erro
       })
   }
-
 }
