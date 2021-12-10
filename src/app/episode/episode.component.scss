@@ -1,42 +1,74 @@
+//configuração, cor, etc de cada div
 div {
+    background-color: #6c7a89;
+    border: 2px solid rgb(0, 0, 0);
     float: left; //Deixar um lado a lado
-    border: 5px solid rgb(0, 0, 0);
     padding: 20px;
     margin: 5px;
-    background: #6c7a89;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    width: 95.5vw;
     div {
+        background-image: url("../image/rick4.jpg");
+        background-size: 100%;
+        border: 1px solid rgb(0, 0, 0);
         padding: 20px;
         width: 90vw;
-        border: 1px solid rgb(255, 255, 255);
-        background-color: rgba(31, 31, 31, 0.582);
         div {
-            background-color: rgb(255, 255, 255);
+            background-image: none;
+            background-color: rgba(255, 255, 255, 0.8);
             border: 1px solid black;
             padding: 10px;
-            width: 550px;
-            height: 200px;
             border-radius: 10px;
-            li {
-                list-style-type: none;
-            }
+            width: 300px;
+            height: 250px;
+            margin: 10px;
+            position: relative;
         }
     }
 }
 
-h1,
-.texto {
-    background-color: rgb(255, 255, 255);
+//Personalização de todos os H1 da pagina
+h1 {
+    // background-color: #00000093;
+    color: antiquewhite;
+    text-align: center;
+    width: auto;
+}
+
+//Cor e formato de todos os Botões, do rodapé e do "ver mais"
+button {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 16px;
+}
+
+// retirar os pontinhos da Lista
+li {
+    list-style-type: none;
+}
+
+//Centralização do botao de baixo e de cima
+.button-low,
+.button-up,
+.footer,
+.header {
     text-align: center;
 }
 
-.imagens-pers img {
-    //margin: 4px;
-    border: 4px solid rgb(0, 0, 0);
-    max-width: 200px;
-    max-height: 150px;
-    width: auto;
-    height: auto;
+//DISTANCIA dos botão avanço e retorno no rodapé
+.page-next,
+.page-prev {
+    margin-right: 20px;
+}
+
+//tamanho e distancia entre os botões home,episode e location
+.page-home,
+.page-location,
+.page-episode {
+    margin-right: 10px;
+    width: 15%;
+    height: 100%;
 }

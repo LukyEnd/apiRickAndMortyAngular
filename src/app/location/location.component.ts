@@ -10,6 +10,7 @@ import { ServiceService } from '../service/service.service';
 export class LocationComponent implements OnInit {
   locationSuccess!: ApiLocationModel[];
   locationError!: string;
+  currentUrl!: string;
 
   constructor(private serv: ServiceService) { }
 
@@ -21,9 +22,36 @@ export class LocationComponent implements OnInit {
     this.serv.apiLocationInfo()
       .subscribe(data => {
         this.locationSuccess = data
+        this.currentUrl = 'https://rickandmortyapi.com/api/character'
         console.log('Data', data)
       }, error => {
         this.locationError = error
+      })
+  }
+
+  pageNextInfo() {
+    this.serv.apiPageInfo(this.currentUrl)
+      .subscribe(pageInfo => {
+        this.currentUrl = pageInfo.next;
+        this.serv.buttonPageLocation(pageInfo.next)
+          .subscribe(data => {
+            this.locationSuccess = data;
+          })
+      }, erro => {
+        this.locationError = erro
+      })
+  }
+
+  pagePrevInfo() {
+    this.serv.apiPageInfo(this.currentUrl)
+      .subscribe(pageInfo => {
+        this.currentUrl = pageInfo.prev
+        this.serv.buttonPageLocation(pageInfo.prev)
+          .subscribe(data => {
+            this.locationSuccess = data;
+          })
+      }, erro => {
+        this.locationError = erro
       })
   }
 

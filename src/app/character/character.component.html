@@ -1,9 +1,9 @@
-<header class="button-up">
-    <a href="/character"><button class="page-home">Home</button></a>
-    <a href="/episode"><button class="page-episode">Episodios</button></a>
-    <a href="/location"><button class="page-location">Localizações</button></a>
-</header>
 <div>
+    <div class="header">
+        <a href="/character"><button class="page-home">Personagens</button></a>
+        <a href="/episode"><button class="page-episode">Episodios</button></a>
+        <a href="/location"><button class="page-location">Localizações</button></a>
+    </div>
     <div>
         <h1>Lista de Personagens</h1>
         <div *ngFor="let character of charSuccess">
@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="button-low">
-        <button (click)="pageInfo()" class="page-next">Anterior</button>
-        <button (click)="pageInfo()" class="paga-prev">Proxima</button>
+        <button (click)="pagePrevInfo()" class="page-next">Anterior</button>
+        <button (click)="pageNextInfo()" class="paga-prev">Proxima</button>
     </div>
 </div>

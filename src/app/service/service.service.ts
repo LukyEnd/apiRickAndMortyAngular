@@ -5,21 +5,18 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { pluck } from 'rxjs/operators';
-import { ApiPageModel } from './../model/api-page.module';
+import { ApiPageModel } from '../model/page.module';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-  currentUrl!: string;
-
 
   constructor(private http: HttpClient) { }
 
-  apiCharacterInfo(): Observable<ApiCharacterModel[]> {   //só e executado 1 vez ?
-    this.currentUrl = 'https://rickandmortyapi.com/api/character'
-    return this.http.get(this.currentUrl)
+  apiCharacterInfo(): Observable<ApiCharacterModel[]> {
+    return this.http.get('https://rickandmortyapi.com/api/character')
       .pipe(pluck('results'))
   }
 
@@ -33,12 +30,41 @@ export class ServiceService {
       .pipe(pluck('results'))
   }
 
+
   apiPageInfo(url: string): Observable<ApiPageModel> {
     return this.http.get(url)
       .pipe(pluck('info'))
   }
 
-  apiNextCaracter(url: string): Observable<ApiCharacterModel[]> {
+  //SERVER DE CHARACTER --------------------------------------------------------
+  buttonPageCharacter(url: string): Observable<ApiCharacterModel[]> {
+    return this.http.get(url)
+      .pipe(pluck('results'))
+  }
+
+  apiPrevCaracter(url: string): Observable<ApiCharacterModel[]> {
+    return this.http.get(url)
+      .pipe(pluck('results'))
+  }
+
+  //SERVER DE EPISODE --------------------------------------------------------
+  buttonPageEpisode(url: string): Observable<ApiEpisodeModel[]> {
+    return this.http.get(url)
+      .pipe(pluck('results'))
+  }
+
+  apiPrevEpisode(url: string): Observable<ApiEpisodeModel[]> {
+    return this.http.get(url)
+      .pipe(pluck('results'))
+  }
+
+  //SERVER DE LOCATION --------------------------------------------------------
+  buttonPageLocation(url: string): Observable<ApiLocationModel[]> {
+    return this.http.get(url)
+      .pipe(pluck('results'))
+  }
+
+  apiPrevLocation(url: string): Observable<ApiLocationModel[]> {
     return this.http.get(url)
       .pipe(pluck('results'))
   }

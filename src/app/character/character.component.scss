@@ -5,22 +5,23 @@ div {
     border: 2px solid rgb(0, 0, 0);
     padding: 20px;
     margin: 5px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     div {
-        background-color: rgba(31, 31, 31, 0.582);
+        background-image: url("../image/rick3.jpg");
+        // background-color: rgba(31, 31, 31, 0.582);
         padding: 20px;
         width: 90vw;
         border: 1px solid rgb(0, 0, 0);
         div {
-            background-color: rgb(31, 28, 28);
+            background-image: none;
+            background-color: #6c7a8942;
             border: 1px solid black;
             padding: 10px;
             min-width: 300px;
             width: 30%;
             height: 40%;
             border-radius: 10px;
+            margin: 10px;
+            position: relative;
         }
     }
 }
@@ -32,14 +33,15 @@ img {
 
 //Personalização de todos os H1 da pagina
 h1 {
-    background-color: rgb(31, 28, 28);
+    // background-color: rgb(31, 28, 28);
     color: antiquewhite;
     text-align: center;
 }
 
 //Tamanho de Cada Cart contendo imagens e texto, nomes,  etc..
 mat-card {
-    height: 200px;
+    background-color: #ffffffea;
+    height: 250px;
     max-width: 400px;
     margin-bottom: 8px;
 }
@@ -69,12 +71,6 @@ header {
     background-color: rgb(31, 28, 28);
 }
 
-//Centralização do botao de baixo e de cima
-.button-low,
-.button-up {
-    text-align: center;
-}
-
 //DISTANCIA dos botão avanço e retorno no rodapé
 .page-next,
 .page-prev {
@@ -88,6 +84,14 @@ header {
     margin-right: 10px;
     width: 15%;
     height: 100%;
+}
+
+//Centralização do botao de baixo e de cima
+.button-low,
+.button-up,
+.footer,
+.header {
+    text-align: center;
 }
 
 //Efeito ao Colocar mause encima do botão OBS.: Apenas do VER MAIS

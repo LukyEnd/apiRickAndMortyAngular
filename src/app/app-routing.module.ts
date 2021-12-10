@@ -5,6 +5,7 @@ import { EpisodeComponent } from './episode/episode.component';
 import { LocationComponent } from './location/location.component';
 
 const routes: Routes = [
+  { path: '', component: CharacterComponent },
   { path: 'character', component: CharacterComponent },
   { path: 'episode', component: EpisodeComponent },
   { path: 'location', component: LocationComponent }

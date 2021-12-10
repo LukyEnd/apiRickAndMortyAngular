@@ -13,9 +13,7 @@ import { ReadCharacterComponent } from './read-character/read-character.componen
 export class CharacterComponent implements OnInit {
   charSuccess!: ApiCharacterModel[];
   charErro!: string;
-  nextPageButton!: string;
-  prevPageButton!: string;
-  currentUrl!: string;
+  currentUrl!: string
 
   constructor(private serv: ServiceService, public dialog: MatDialog, public resp: ResponseService) { }
 
@@ -33,12 +31,24 @@ export class CharacterComponent implements OnInit {
       })
   }
 
-  pageInfo() {
+  pageNextInfo() {
     this.serv.apiPageInfo(this.currentUrl)
       .subscribe(pageInfo => {
         this.currentUrl = pageInfo.next;
-        this.serv.apiNextCaracter(pageInfo.next)
+        this.serv.buttonPageCharacter(pageInfo.next)
+          .subscribe(data => {
+            this.charSuccess = data;
+          })
+      }, erro => {
+        this.charErro = erro
+      })
+  }
 
+  pagePrevInfo() {
+    this.serv.apiPageInfo(this.currentUrl)
+      .subscribe(pageInfo => {
+        this.currentUrl = pageInfo.prev
+        this.serv.buttonPageCharacter(pageInfo.prev)
           .subscribe(data => {
             this.charSuccess = data;
           })

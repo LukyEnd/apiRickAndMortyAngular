@@ -16,4 +16,5 @@ export class ResponseService {
     setCharacterInfo(character: ApiCharacterModel): ApiCharacterModel {
         return this.characterInfo = character;
     }
+
 }
