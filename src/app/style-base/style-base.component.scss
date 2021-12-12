@@ -1,0 +1,114 @@
+//Todas <li> da pagina
+li {
+    padding: 8px; //Distancia entre as Linhas
+    list-style-type: none; //Retirar Pontinhos que vem com a Lista
+}
+
+//Todas <h1> da pagina
+h1 {
+    color: #fff;
+    font-size: 34px;
+    margin-bottom: -2px;
+}
+
+//Todas <h2> da pagina
+h2 {
+}
+
+//-------------------------------------------config BOTÃO---------
+//Cor e formato de todos os Botões
+button {
+    background: #069cc2;
+    border-radius: 6px;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+}
+
+//tamanho e distancia entre os botões home,episode e location
+.page-home,
+.page-location,
+.page-episode {
+    margin-top: 15px;
+    margin-right: 10px;
+    width: 15%;
+    height: 60%;
+}
+
+// Centralização do botao de baixo e de cima
+.footer,
+.header {
+    text-align: center;
+}
+
+.page-next,
+.page-prev {
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-right: 20px; //Distancia entre botões
+    margin-bottom: 10px;
+}
+//-------------------------------------------
+
+//div principal
+.base {
+    background-color: #000000; //Cor da div Base
+}
+
+//div dos botões de cima
+.header {
+    height: 80px;
+}
+
+//div do titulo
+.title {
+    height: 40px;
+    width: 90%;
+    margin-left: 30px;
+}
+
+//div onde contem a div do ngFor
+.container,
+.title,
+.footer {
+    background-size: 100%; //Utilizar 100% da imagem
+    border: 1px solid rgb(255, 255, 255); //Borda da div
+    border-radius: 10px; //Deixar pontas arredondadas
+    min-width: 95%; //Aumentar laterias da div Container
+    display: flex; //Permite utilizar comandos flex que colocarei logo abaixo
+    flex-direction: row; //Determina como os itens sao alinhados no container, horizontal ou vertical
+    flex-wrap: wrap; //Quebrar items para a linha seguinte
+    justify-content: space-evenly; //Definir alinhamento dos itens que ficarao na linha, No README tem todos
+    align-items: stretch; //Define o comportamento dos elementos, o alinhamento deles de cordo com os outros
+}
+
+//div do ngFor
+.ngfor {
+    background-image: none;
+    // background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    // width: 30%; //Tamanho dos Card Horizontalmente fixos
+    // min-height: 300px; //Tamanho minimo dos Cars Verticalmente fixos
+    // max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
+    margin-top: 20px; // Distanciamento da linha da div de cima
+    margin-bottom: 20px; //Distanciamento da linha da div de baixo
+    border-radius: 10px; //Deixar pontas arredondadas
+}
+
+//div dos botões de baixo
+.footer {
+    // display: flex;
+    // align-content: flex-end;
+    // flex-wrap: wrap; //Quebrar items para a linha seguinte
+    // justify-content: center; //Definir alinhamento dos itens que ficarao na linha, No README tem todos
+    height: 70px;
+    width: 95%;
+    margin-left: 30px;
+    border-radius: 10px; //Deixar pontas arredondadas
+    // border: 1px solid rgb(255, 255, 255);
+    // width: 90%;
+    // border-radius: 10px; //Deixar pontas arredondadas
+    // display: flex;
+}

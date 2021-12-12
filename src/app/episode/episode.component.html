@@ -1,30 +1,26 @@
-<div>
-    <div>
+<div class="base">
+    <div class="header">
         <app-header></app-header>
     </div>
-    <div>
+    <div class="title">
         <h1>Episodios</h1>
-        <div *ngFor="let episode of episodeSuccess">
+    </div>
+    <div class="container">
+        <div *ngFor="let episode of episodeSuccess" class="ngfor">
             <li>
                 <h2>Ep. {{episode.name}}</h2>
             </li>
-            <p></p>
             <li><b>ID: </b>{{episode.id}}</li>
-            <p></p>
             <li><b>Data de Lançamento: </b>{{episode.air_date}}???</li>
-            <p></p>
             <li><b>Numero do Ep.: </b>{{episode.episode}}</li>
-            <p></p>
             <!-- <p><a href={{episode.characters}}>{{episode.characters}}</a></p> -->
-            <!-- <br> -->
             <li><b>URL do Ep.: </b><a href={{episode.url}}>{{episode.url}}</a></li>
-            <p></p>
             <li><b>Data de Criação: </b>{{episode.created | date: "dd/MM/yyyy"}} </li>
         </div>
     </div>
     <div class="footer">
         <button (click)="pagePrevInfo()" class="page-next">Anterior</button>
-        <button (click)="pageNextInfo()" class="paga-prev">Proxima</button>
+        <button (click)="pageNextInfo()" class="page-prev">Proxima</button>
         <!-- LOOP Infinito, arrumar -->
         <!-- <app-footer [pageNextInfo]="pageNextInfo()"></app-footer> -->
         <!-- <app-footer [pagePrevInfo]="pagePrevInfo()"></app-footer> -->

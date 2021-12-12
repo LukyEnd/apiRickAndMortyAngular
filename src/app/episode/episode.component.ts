@@ -6,7 +6,7 @@ import { ServiceService } from '../service/service.service';
 @Component({
   selector: 'app-episode',
   templateUrl: './episode.component.html',
-  styleUrls: ['./episode.component.scss']
+  styleUrls: ['./episode.component.scss', '../style-base/style-base.component.scss']
 })
 export class EpisodeComponent implements OnInit {
   episodeSuccess!: ApiEpisodeModel[];

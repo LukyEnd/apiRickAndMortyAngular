@@ -1,66 +1,26 @@
-//configuração, cor, etc de cada div
-div {
-    background-color: #6c7a89;
-    border: 2px solid rgb(0, 0, 0);
-    float: left; //Deixar um lado a lado
-    padding: 20px;
-    margin: 5px;
-    width: 95.5vw;
-    div {
-        background-image: url("../image/rick2.jpg");
-        background-size: 100%;
-        border: 1px solid rgb(0, 0, 0);
-        padding: 20px;
-        width: 90vw;
-        div {
-            background-image: none;
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 1px solid black;
-            padding: 10px;
-            border-radius: 10px;
-            width: 300px;
-            height: 250px;
-            margin: 10px;
-            position: relative;
-        }
-    }
+.container,
+.title,
+.footer {
+    background-image: url("../image/rick2.jpg"); //Imagem de fundo na div secundaria
+    background-size: 100%;
+}
+.ngfor {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 30%; //Tamanho dos Card Horizontalmente fixos
+    min-height: 300px; //Tamanho minimo dos Cars Verticalmente fixos
+    max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
 }
 
-//Personalização de todos os H1 da pagina
-h1 {
-    // background-color: rgb(31, 28, 28);
-    color: antiquewhite;
-    text-align: center;
-}
-
-//cor do cabeçalhoo
-header {
-    background-color: rgb(31, 28, 28);
-}
-
-//Cor e formato de todos os Botões, do rodapé e do "ver mais"
+// Retirar após arrumar botoes padrao footer ----------------------------------------------daki
+//Cor e formato de todos os Botões
 button {
-    background: rgba(255, 255, 255, 0.61);
-    color: rgb(3, 0, 0);
+    background: #069cc2;
     border-radius: 6px;
     padding: 15px;
     cursor: pointer;
-
+    color: #fff;
     border: none;
     font-size: 16px;
-}
-
-// retirar os pontinhos da Lista
-li {
-    list-style-type: none;
-}
-
-//Centralização do botao de baixo e de cima
-.button-low,
-.button-up,
-.footer,
-.header {
-    text-align: center;
 }
 
 //DISTANCIA dos botão avanço e retorno no rodapé
@@ -68,12 +28,8 @@ li {
 .page-prev {
     margin-right: 20px;
 }
-
-//tamanho e distancia entre os botões home,episode e location
-.page-home,
-.page-location,
-.page-episode {
-    margin-right: 10px;
-    width: 15%;
-    height: 100%;
+//Centralização do botao de baixo
+.footer {
+    text-align: center;
 }
+//--------------------------------------------------------------------------------------------até aki

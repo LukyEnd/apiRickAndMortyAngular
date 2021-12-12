@@ -1,10 +1,12 @@
-<div>
-    <div>
+<div class="base">
+    <div class="header">
         <app-header></app-header>
     </div>
-    <div>
+    <div class="title">
         <h1>Lista de Personagens</h1>
-        <div *ngFor="let character of charSuccess">
+    </div>
+    <div class="container">
+        <div *ngFor="let character of charSuccess" class="ngfor">
             <mat-card>
                 <mat-card-title-group>
                     <mat-card-title>
@@ -29,10 +31,9 @@
     </div>
     <div class="footer">
         <button (click)="pagePrevInfo()" class="page-next">Anterior</button>
-        <button (click)="pageNextInfo()" class="paga-prev">Proxima</button>
+        <button (click)="pageNextInfo()" class="page-prev">Proxima</button>
     </div>
     <!-- LOOP Infinito, arrumar -->
     <!-- <app-footer [pageNextInfo]="pageNextInfo()"></app-footer> -->
     <!-- <app-footer [pagePrevInfo]="pagePrevInfo()"></app-footer> -->
-
 </div>

@@ -1,54 +1,13 @@
-//configuração, cor, etc de cada div
-div {
-    background-color: #6c7a89;
-    float: left; //Deixar um lado a lado
-    border: 2px solid rgb(0, 0, 0);
-    padding: 20px;
-    margin: 5px;
-    div {
-        background-image: url("../image/rick3.jpg");
-        background-image: 100%;
-        // background-color: rgba(31, 31, 31, 0.582);
-        padding: 20px;
-        // width: 90vw;
-        border: 1px solid rgb(0, 0, 0);
-        min-width: 300px;
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
-        margin: 10px;
-        position: relative;
-        div {
-            background-image: none;
-            background-color: #6c7a8942;
-            border: 1px solid black;
-            padding: 15px;
-            min-width: 300px;
-            width: 30%;
-            height: 40%;
-            border-radius: 10px;
-            margin: 10px;
-            position: relative;
-        }
-    }
-}
-
 //Configuração de todas imagens, como borda
 img {
     border: 1px solid rgb(0, 0, 0);
 }
 
-//Personalização de todos os H1 da pagina
-h1 {
-    // background-color: rgb(31, 28, 28);
-    color: antiquewhite;
-    text-align: center;
-}
-
-//Tamanho de Cada Cart contendo imagens e texto, nomes,  etc..
+// Tamanho de Cada Cart contendo imagens e texto, nomes,  etc..
 mat-card {
-    background-color: #ffffffea;
-    height: 300px;
+    background-color: rgba(255, 255, 255, 0.884);
+    min-height: 250px; //Tamanho minimo dos Cars Verticalmente fixos
+    max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
     max-width: 400px;
     margin-bottom: 8px;
 }
@@ -62,38 +21,16 @@ mat-card-content {
     margin-top: -40px;
 }
 
-//Cor e formato de todos os Botões, do rodapé e do "ver mais"
-button {
-    background: #069cc2;
-    border-radius: 6px;
-    padding: 15px;
-    cursor: pointer;
-    color: #fff;
-    border: none;
-    font-size: 16px;
+.container,
+.title,
+.footer {
+    background-image: url("../image/rick.jpg");
+    background-size: 100%;
 }
 
-//DISTANCIA dos botão avanço e retorno no rodapé
-.page-next,
-.page-prev {
-    margin-right: 20px;
-}
-
-//tamanho e distancia entre os botões home,episode e location
-.page-home,
-.page-location,
-.page-episode {
-    margin-right: 10px;
-    width: 15%;
-    height: 100%;
-}
-
-//Centralização do botao de baixo e de cima
-.button-low,
-.button-up,
-.footer,
-.header {
-    text-align: center;
+.ngfor {
+    width: 30%; //Tamanho dos Card Horizontalmente fixos
+    height: 55%;
 }
 
 //Efeito ao Colocar mause encima do botão OBS.: Apenas do VER MAIS
@@ -103,7 +40,6 @@ button {
     border: none;
     color: white;
     padding: 15px 32px;
-    //text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;

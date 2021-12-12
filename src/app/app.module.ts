@@ -14,6 +14,7 @@ import { EpisodeComponent } from './episode/episode.component';
 import { ReadEpisodeComponent } from './episode/read-episode/read-episode.component';
 import { LocationComponent } from './location/location.component';
 import { ReadLocationComponent } from './location/read-location/read-location.component';
+import { StyleBaseComponent } from './style-base/style-base.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ReadLocationComponent } from './location/read-location/read-location.co
     ReadEpisodeComponent,
     ReadLocationComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    StyleBaseComponent
   ],
   imports: [
     BrowserModule,

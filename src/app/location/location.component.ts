@@ -5,7 +5,7 @@ import { ServiceService } from '../service/service.service';
 @Component({
   selector: 'app-location',
   templateUrl: './location.component.html',
-  styleUrls: ['./location.component.scss']
+  styleUrls: ['./location.component.scss', '../style-base/style-base.component.scss']
 })
 export class LocationComponent implements OnInit {
   locationSuccess!: ApiLocationModel[];

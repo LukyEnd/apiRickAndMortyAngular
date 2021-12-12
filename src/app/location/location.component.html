@@ -1,30 +1,27 @@
-<div>
-    <div>
+<div class="base">
+    <div class="header">
         <app-header></app-header>
     </div>
-    <div>
+    <div class="title">
         <h1>Localizações</h1>
-        <div *ngFor="let location of locationSuccess">
+    </div>
+    <div class="container">
+        <div *ngFor="let location of locationSuccess" class="ngfor">
             <li>
                 <h2>{{location.name}}</h2>
             </li>
             <li><b>ID: </b>{{location.id}}</li>
-            <p></p>
             <li><b>Tipo: </b>{{location.type}}</li>
-            <p></p>
             <li><b>Dimensão: </b>{{location.dimension}}</li>
-            <p></p>
             <!-- <li><a href={{location.residents}}>{{location.residents}}</a></li> -->
-            <!-- <p></p> -->
             <li><b>Localização da {{location.dimension}}:</b><a href={{location.url}}>
                     {{location.url}}</a></li>
-            <p></p>
             <li><b>Data de Criação: </b>{{location.created | date: 'dd/MM/yyyy'}}</li>
         </div>
     </div>
     <div class="footer">
         <button (click)="pagePrevInfo()" class="page-next">Anterior</button>
-        <button (click)="pageNextInfo()" class="paga-prev">Proxima</button>
+        <button (click)="pageNextInfo()" class="page-prev">Proxima</button>
         <!-- LOOP Infinito, arrumar -->
         <!-- <app-footer [pageNextInfo]="pageNextInfo()"></app-footer> -->
         <!-- <app-footer [pagePrevInfo]="pagePrevInfo()"></app-footer> -->

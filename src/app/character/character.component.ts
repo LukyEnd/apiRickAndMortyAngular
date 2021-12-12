@@ -8,7 +8,7 @@ import { ReadCharacterComponent } from './read-character/read-character.componen
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
-  styleUrls: ['./character.component.scss']
+  styleUrls: ['./character.component.scss', '../style-base/style-base.component.scss']
 })
 export class CharacterComponent implements OnInit {
   charSuccess!: ApiCharacterModel[];
