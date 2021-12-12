@@ -6,9 +6,16 @@ li {
 
 //Todas <h1> da pagina
 h1 {
+    background-color: #000000d2;
+    border-radius: 50px;
+    width: 30%;
     color: #fff;
-    font-size: 34px;
-    margin-bottom: -2px;
+    font-size: 28px;
+    margin-bottom: 2px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly; //Definir alinhamento dos itens que ficarao na linha, No README tem todos
+    align-items: center; //Define o comportamento dos elementos, o alinhamento deles de cordo com os outros
 }
 
 //Todas <h2> da pagina
@@ -19,7 +26,7 @@ h2 {
 //Cor e formato de todos os Botões
 button {
     background: #069cc2;
-    border-radius: 6px;
+    border-radius: 50px;
     padding: 15px;
     cursor: pointer;
     color: #fff;
@@ -32,22 +39,26 @@ button {
 .page-location,
 .page-episode {
     margin-top: 15px;
-    margin-right: 10px;
-    width: 15%;
+    margin-right: 100px;
+    width: 100%;
     height: 60%;
 }
 
-// Centralização do botao de baixo e de cima
-.footer,
+//Centralização do botao de cima
 .header {
-    text-align: center;
+    display: flex;
+    flex-direction: row; //Determina como os itens sao alinhados no container, horizontal ou vertical
+    justify-content: space-evenly; //Definir alinhamento dos itens que ficarao na linha, No README tem todos
+    align-items: center; //Define o comportamento dos elementos, o alinhamento deles de cordo com os outros
 }
 
+//Config botão de baixo
 .page-next,
 .page-prev {
+    width: 40%;
+    height: 60%;
     border: 2px solid black;
     margin-top: 10px;
-    margin-right: 20px; //Distancia entre botões
     margin-bottom: 10px;
 }
 //-------------------------------------------
@@ -64,16 +75,19 @@ button {
 
 //div do titulo
 .title {
-    height: 40px;
-    width: 90%;
-    margin-left: 30px;
+    height: 60px;
 }
 
-//div onde contem a div do ngFor
+//Varias divs aqui
 .container,
 .title,
 .footer {
+    //config do fundo de todas paginas
     background-size: 100%; //Utilizar 100% da imagem
+    background-repeat: no-repeat; //nao repetir imagem
+    background-attachment: fixed; // imagem fixa
+    background-position: center; // imagem centralizada
+    //--------------------------------------------------------
     border: 1px solid rgb(255, 255, 255); //Borda da div
     border-radius: 10px; //Deixar pontas arredondadas
     min-width: 95%; //Aumentar laterias da div Container
@@ -87,28 +101,16 @@ button {
 //div do ngFor
 .ngfor {
     background-image: none;
-    // background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid black;
-    // width: 30%; //Tamanho dos Card Horizontalmente fixos
-    // min-height: 300px; //Tamanho minimo dos Cars Verticalmente fixos
-    // max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
+    border: 2px solid black;
     margin-top: 20px; // Distanciamento da linha da div de cima
     margin-bottom: 20px; //Distanciamento da linha da div de baixo
     border-radius: 10px; //Deixar pontas arredondadas
 }
 
 //div dos botões de baixo
-.footer {
-    // display: flex;
-    // align-content: flex-end;
-    // flex-wrap: wrap; //Quebrar items para a linha seguinte
-    // justify-content: center; //Definir alinhamento dos itens que ficarao na linha, No README tem todos
-    height: 70px;
-    width: 95%;
-    margin-left: 30px;
+.footer,
+.title {
     border-radius: 10px; //Deixar pontas arredondadas
-    // border: 1px solid rgb(255, 255, 255);
-    // width: 90%;
-    // border-radius: 10px; //Deixar pontas arredondadas
-    // display: flex;
+    width: 95%; //Tamanho total
+    margin-left: 2.5%; //Distancia da esquerda
 }

@@ -1,14 +1,15 @@
 //Configuração de todas imagens, como borda
 img {
     border: 1px solid rgb(0, 0, 0);
+    width: 50%;
 }
 
 // Tamanho de Cada Cart contendo imagens e texto, nomes,  etc..
 mat-card {
     background-color: rgba(255, 255, 255, 0.884);
-    min-height: 250px; //Tamanho minimo dos Cars Verticalmente fixos
+    min-height: 350px; //Tamanho minimo dos Cars Verticalmente fixos
     max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
-    max-width: 400px;
+    width: 100%;
     margin-bottom: 8px;
 }
 
@@ -16,7 +17,7 @@ mat-card {
 mat-card-content {
     position: absolute;
     left: 97%;
-    top: 95%;
+    top: 90%;
     margin-left: -110px;
     margin-top: -40px;
 }
@@ -25,7 +26,6 @@ mat-card-content {
 .title,
 .footer {
     background-image: url("../../image/rick.jpg");
-    background-size: 100%;
 }
 
 .ngfor {

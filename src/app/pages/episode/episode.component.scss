@@ -11,26 +11,3 @@
     min-height: 300px; //Tamanho minimo dos Cars Verticalmente fixos
     max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
 }
-
-// Retirar após arrumar botoes padrao footer ----------------------------------------------daki
-//Cor e formato de todos os Botões
-button {
-    background: #069cc2;
-    border-radius: 6px;
-    padding: 15px;
-    cursor: pointer;
-    color: #fff;
-    border: none;
-    font-size: 16px;
-}
-
-//DISTANCIA dos botão avanço e retorno no rodapé
-.page-next,
-.page-prev {
-    margin-right: 20px;
-}
-//Centralização do botao de baixo
-.footer {
-    text-align: center;
-}
-//--------------------------------------------------------------------------------------------até aki
