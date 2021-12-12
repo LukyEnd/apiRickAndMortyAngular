@@ -1,7 +1,4 @@
 <div class="base">
-    <div class="header">
-        <app-header></app-header>
-    </div>
     <div class="title">
         <h1>Episódios</h1>
     </div>
@@ -10,12 +7,12 @@
             <li>
                 <h2>Ep. {{episode.name}}</h2>
             </li>
-            <li><b>ID: </b>{{episode.id}}</li>
-            <li><b>Data de Lançamento: </b>{{episode.air_date}}???</li>
-            <li><b>Numero do Ep.: </b>{{episode.episode}}</li>
+            <li><strong>ID: </strong>{{episode.id}}</li>
+            <li><strong>Data de Lançamento: </strong>{{episode.air_date}}???</li>
+            <li><strong>Numero do Ep.: </strong>{{episode.episode}}</li>
             <!-- <p><a href={{episode.characters}}>{{episode.characters}}</a></p> -->
-            <li><b>URL do Ep.: </b><a href={{episode.url}}>{{episode.url}}</a></li>
-            <li><b>Data de Criação: </b>{{episode.created | date: "dd/MM/yyyy"}} </li>
+            <li><strong>URL do Ep.: </strong><a [href]="episode.url">{{episode.url}}</a></li>
+            <li><strong>Data de Criação: </strong>{{episode.created | date: "dd/MM/yyyy"}} </li>
         </div>
     </div>
     <div class="footer">

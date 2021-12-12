@@ -1,18 +1,19 @@
 <div>
-        <mat-card-title><b>{{charSuccess.name}}</b></mat-card-title>
-        <mat-card-subtitle></mat-card-subtitle>
-        <mat-card-subtitle><b>Estado: </b>{{charSuccess.status}}</mat-card-subtitle>
-        <mat-card-subtitle><b>Espécie: </b>{{charSuccess.species}}</mat-card-subtitle>
-        <mat-card-subtitle><b>Tipo: </b>{{charSuccess.type}}</mat-card-subtitle>
-        <mat-card-subtitle><b>Gênero: </b>{{charSuccess.gender}}</mat-card-subtitle>
-        <mat-card-subtitle><b>Lugar de Origem: </b>{{charSuccess.origin.name}}</mat-card-subtitle>
-        <mat-card-subtitle><b>Link {{charSuccess.origin.name}}: </b><a
-                        href={{charSuccess.origin.url}}>{{charSuccess.origin.url}}</a></mat-card-subtitle>
-        <mat-card-subtitle><b>Localização Atual: </b>{{charSuccess.location.name}}</mat-card-subtitle>
-        <mat-card-subtitle><b>Link {{charSuccess.location.name}}: </b><a
-                        href={{charSuccess.location.url}}>{{charSuccess.location.url}}</a></mat-card-subtitle>
+        <mat-card-title><strong>{{charSuccess.name}}</strong></mat-card-title>
+        <mat-card-subtitle><strong>ID: </strong>{{charSuccess.id}}</mat-card-subtitle>
+        <mat-card-subtitle><strong>Estado: </strong>{{charSuccess.status}}</mat-card-subtitle>
+        <mat-card-subtitle><strong>Espécie: </strong>{{charSuccess.species}}</mat-card-subtitle>
+        <mat-card-subtitle><strong>Tipo: </strong>{{charSuccess.type}}</mat-card-subtitle>
+        <mat-card-subtitle><strong>Gênero: </strong>{{charSuccess.gender}}</mat-card-subtitle>
+        <mat-card-subtitle><strong>Lugar de Origem: </strong>{{charSuccess.origin.name}}</mat-card-subtitle>
+        <mat-card-subtitle><strong>Link {{charSuccess.origin.name}}: </strong><a
+                        [href]="charSuccess.origin.url">{{charSuccess.origin.url}}</a></mat-card-subtitle>
+        <mat-card-subtitle><strong>Localização Atual: </strong>{{charSuccess.location.name}}</mat-card-subtitle>
+        <mat-card-subtitle><strong>Link {{charSuccess.location.name}}: </strong><a
+                        [href]="charSuccess.location.url">{{charSuccess.location.url}}</a></mat-card-subtitle>
         <!-- <mat-card-subtitle>{{charSuccess.episode}}</mat-card-subtitle> -->
         <!-- <mat-card-subtitle>{{charSuccess.url}}</mat-card-subtitle> -->
-        <mat-card-subtitle><b>Data de Criação: </b>{{charSuccess.created | date: "dd/MM/yyyy"}}</mat-card-subtitle>
-        <img src="{{charSuccess.image}}">
+        <mat-card-subtitle><strong>Data de Criação: </strong>{{charSuccess.created | date: "dd/MM/yyyy"}}
+        </mat-card-subtitle>
+        <img [src]="charSuccess.image">
 </div>

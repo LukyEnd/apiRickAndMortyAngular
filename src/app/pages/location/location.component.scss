@@ -1,12 +1,13 @@
 .container,
 .title,
 .footer {
-    background-image: url("../../image/rick2.jpg"); //Imagem de fundo na div secundaria
+    background-image: url("../../image/carrossel/rick2.png"); //Imagem de fundo na div secundaria
     background-size: 100%;
 }
 .ngfor {
     background-color: rgba(255, 255, 255, 0.8);
-    width: 30%; //Tamanho dos Card Horizontalmente fixos
-    min-height: 300px; //Tamanho minimo dos Cars Verticalmente fixos
-    max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
+    border: 2px solid black;
+    width: 100%;
+    max-width: 250px;
+    height: 300px;
 }

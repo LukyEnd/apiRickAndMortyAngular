@@ -1,6 +1,8 @@
 //Todas <li> da pagina
 li {
-    padding: 8px; //Distancia entre as Linhas
+    padding-left: 10px;
+    padding-top: 5px; //Distancia entre as Linhas cima
+    padding-bottom: 5px; //Distancia entre as Linhas baixo
     list-style-type: none; //Retirar Pontinhos que vem com a Lista
 }
 
@@ -8,9 +10,10 @@ li {
 h1 {
     background-color: #000000d2;
     border-radius: 50px;
-    width: 30%;
+    width: 100%;
+    max-width: 500px;
     color: #fff;
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 2px;
     font-weight: bold;
     display: flex;
@@ -20,57 +23,38 @@ h1 {
 
 //Todas <h2> da pagina
 h2 {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0; //distancia entre h2 e texto abaixo
 }
 
 //-------------------------------------------config BOTÃO---------
 //Cor e formato de todos os Botões
 button {
     background: #069cc2;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 15px;
-    cursor: pointer;
     color: #fff;
     border: none;
     font-size: 16px;
 }
 
-//tamanho e distancia entre os botões home,episode e location
-.page-home,
-.page-location,
-.page-episode {
-    margin-top: 15px;
-    margin-right: 100px;
-    width: 100%;
-    height: 60%;
-}
-
-//Centralização do botao de cima
-.header {
-    display: flex;
-    flex-direction: row; //Determina como os itens sao alinhados no container, horizontal ou vertical
-    justify-content: space-evenly; //Definir alinhamento dos itens que ficarao na linha, No README tem todos
-    align-items: center; //Define o comportamento dos elementos, o alinhamento deles de cordo com os outros
-}
-
+//-------------------------------------------Retirar depois de colocar footer em html.module
 //Config botão de baixo
 .page-next,
 .page-prev {
-    width: 40%;
-    height: 60%;
+    width: 100%;
+    max-width: 250px;
     border: 2px solid black;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-//-------------------------------------------
+//------------------------------------------------------------------------------
 
 //div principal
 .base {
-    background-color: #000000; //Cor da div Base
-}
-
-//div dos botões de cima
-.header {
-    height: 80px;
+    background-color: #000000de; //Cor da div Base
+    margin-top: 50px; //Espaço interno da div
 }
 
 //div do titulo
@@ -85,8 +69,8 @@ button {
     //config do fundo de todas paginas
     background-size: 100%; //Utilizar 100% da imagem
     background-repeat: no-repeat; //nao repetir imagem
-    background-attachment: fixed; // imagem fixa
-    background-position: center; // imagem centralizada
+    background-attachment: fixed; //imagem fixa
+    background-position: center; //imagem centralizada
     //--------------------------------------------------------
     border: 1px solid rgb(255, 255, 255); //Borda da div
     border-radius: 10px; //Deixar pontas arredondadas
@@ -101,13 +85,12 @@ button {
 //div do ngFor
 .ngfor {
     background-image: none;
-    border: 2px solid black;
     margin-top: 20px; // Distanciamento da linha da div de cima
     margin-bottom: 20px; //Distanciamento da linha da div de baixo
     border-radius: 10px; //Deixar pontas arredondadas
 }
 
-//div dos botões de baixo
+//div dos botões de baixo e do titulo
 .footer,
 .title {
     border-radius: 10px; //Deixar pontas arredondadas

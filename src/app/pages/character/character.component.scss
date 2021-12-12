@@ -1,36 +1,54 @@
 //Configuração de todas imagens, como borda
 img {
     border: 1px solid rgb(0, 0, 0);
-    width: 50%;
-}
-
-// Tamanho de Cada Cart contendo imagens e texto, nomes,  etc..
-mat-card {
-    background-color: rgba(255, 255, 255, 0.884);
-    min-height: 350px; //Tamanho minimo dos Cars Verticalmente fixos
-    max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
     width: 100%;
-    margin-bottom: 8px;
+    max-width: 150px;
 }
 
 //Configuração do botao ver mais
-mat-card-content {
+.card-button {
     position: absolute;
     left: 97%;
-    top: 90%;
+    top: 85%;
     margin-left: -110px;
     margin-top: -40px;
+}
+
+//Tamanho dos textos gerados no card
+.card-title,
+.card,
+.card-location,
+.card-location {
+    border: 0ch;
+    width: 100%;
+    max-width: 150px;
+}
+.card-title {
+    height: 35px;
+}
+
+.card {
+    padding-top: 10px;
+    height: 30px;
+}
+.card-location {
+    height: 45px;
+}
+
+.card-location {
+    height: 50px;
 }
 
 .container,
 .title,
 .footer {
-    background-image: url("../../image/rick.jpg");
+    background-image: url("../../image/carrossel/rick10.jpg");
 }
 
 .ngfor {
-    width: 30%; //Tamanho dos Card Horizontalmente fixos
-    height: 55%;
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
 }
 
 //Efeito ao Colocar mause encima do botão OBS.: Apenas do VER MAIS

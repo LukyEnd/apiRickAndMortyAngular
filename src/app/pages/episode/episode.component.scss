@@ -1,13 +1,14 @@
 .container,
 .title,
 .footer {
-    background-image: url("../../image/rick4.jpg"); //Imagem de fundo na div secundaria
-    background-size: 100%;
+    background-image: url("../../image/carrossel/rick1.jpg"); //Imagem de fundo na div secundaria
 }
 
 .ngfor {
     background-color: rgba(255, 255, 255, 0.8);
-    width: 30%; //Tamanho dos Card Horizontalmente fixos
-    min-height: 300px; //Tamanho minimo dos Cars Verticalmente fixos
-    max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
+    border: 2px solid black;
+    width: 100%; //Tamanho dos Card Horizontalmente fixos
+    max-width: 250px;
+    // min-height: 300px; //Tamanho minimo dos Cars Verticalmente fixos
+    // max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
 }

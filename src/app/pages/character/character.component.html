@@ -1,7 +1,4 @@
 <div class="base">
-    <div class="header">
-        <app-header></app-header>
-    </div>
     <div class="title">
         <h1>Lista de Personagens</h1>
     </div>
@@ -9,21 +6,21 @@
         <div *ngFor="let character of charSuccess" class="ngfor">
             <mat-card>
                 <mat-card-title-group>
-                    <mat-card-title>
+                    <mat-card-title class="card-title">
                         {{character.name}}
                     </mat-card-title>
-                    <mat-card-subtitle></mat-card-subtitle>
-                    <mat-card-subtitle>
-                        <b>{{character.status}} - {{character.species}}</b>
+                    <mat-card-subtitle class="card">
+                        <strong>{{character.status}} - {{character.species}}</strong>
                     </mat-card-subtitle>
-                    <mat-card-subtitle>
-                        Ultima Localiação: <p><b>{{character.location.name}}</b></p>
+                    <mat-card-subtitle class="card-location">
+                        Ultima Localiação: <strong>{{character.location.name}}</strong>
                     </mat-card-subtitle>
-                    <mat-card-subtitle>Visto pela primeira Vez: <p><b>{{character.gender}}</b></p>
+                    <mat-card-subtitle class="card-seen">
+                        Visto pela primeira Vez: <strong>{{character.gender}}</strong>
                     </mat-card-subtitle>
-                    <img mat-card-lg-image src="{{character.image}}">
+                    <img mat-card-lg-image loading="lazy" [alt]="character.id" [src]="character.image">
                 </mat-card-title-group>
-                <mat-card-content>
+                <mat-card-content class="card-button">
                     <button mat-button class="button-mast" (click)="openDialog(character)">Ver Mais...</button>
                 </mat-card-content>
             </mat-card>
