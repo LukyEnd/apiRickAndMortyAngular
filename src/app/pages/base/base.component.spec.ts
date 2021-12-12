@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StyleBaseComponent } from './style-base.component';
+import { StyleBaseComponent } from './base.component';
 
 describe('StyleBaseComponent', () => {
   let component: StyleBaseComponent;
@@ -8,9 +8,9 @@ describe('StyleBaseComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StyleBaseComponent ]
+      declarations: [StyleBaseComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

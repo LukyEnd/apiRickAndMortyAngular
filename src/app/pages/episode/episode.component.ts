@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiEpisodeModel } from '../model/episode.model';
-import { ResponseService } from '../service/character-info.service';
-import { ServiceService } from '../service/service.service';
+import { ApiEpisodeModel } from '../../model/episode.model';
+import { ResponseService } from '../../service/character-info.service';
+import { ServiceService } from '../../service/service.service';
 
 @Component({
   selector: 'app-episode',
   templateUrl: './episode.component.html',
-  styleUrls: ['./episode.component.scss', '../style-base/style-base.component.scss']
+  styleUrls: ['./episode.component.scss', '../base/base.component.scss']
 })
 export class EpisodeComponent implements OnInit {
   episodeSuccess!: ApiEpisodeModel[];

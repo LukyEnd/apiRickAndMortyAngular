@@ -8,13 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './buttons/footer/footer.component';
 import { HeaderComponent } from './buttons/header/header.component';
-import { CharacterComponent } from './character/character.component';
-import { ReadCharacterComponent } from './character/read-character/read-character.component';
-import { EpisodeComponent } from './episode/episode.component';
-import { ReadEpisodeComponent } from './episode/read-episode/read-episode.component';
-import { LocationComponent } from './location/location.component';
-import { ReadLocationComponent } from './location/read-location/read-location.component';
-import { StyleBaseComponent } from './style-base/style-base.component';
+import { CharacterComponent } from './pages/character/character.component';
+import { ReadCharacterComponent } from './pages/character/read-character/read-character.component';
+import { EpisodeComponent } from './pages/episode/episode.component';
+import { ReadEpisodeComponent } from './pages/episode/read-episode/read-episode.component';
+import { LocationComponent } from './pages/location/location.component';
+import { ReadLocationComponent } from './pages/location/read-location/read-location.component';
+import { StyleBaseComponent } from './pages/base/base.component';
 
 
 @NgModule({

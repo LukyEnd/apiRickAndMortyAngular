@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ApiCharacterModel } from '../model/character.model';
-import { ResponseService } from '../service/character-info.service';
-import { ServiceService } from './../service/service.service';
+import { ApiCharacterModel } from '../../model/character.model';
+import { ResponseService } from '../../service/character-info.service';
+import { ServiceService } from '../../service/service.service';
 import { ReadCharacterComponent } from './read-character/read-character.component';
 
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
-  styleUrls: ['./character.component.scss', '../style-base/style-base.component.scss']
+  styleUrls: ['./character.component.scss', '../base/base.component.scss']
 })
 export class CharacterComponent implements OnInit {
   charSuccess!: ApiCharacterModel[];

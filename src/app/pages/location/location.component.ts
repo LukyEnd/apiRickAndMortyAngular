@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiLocationModel } from '../model/location.model';
-import { ServiceService } from '../service/service.service';
+import { ApiLocationModel } from '../../model/location.model';
+import { ServiceService } from '../../service/service.service';
 
 @Component({
   selector: 'app-location',
   templateUrl: './location.component.html',
-  styleUrls: ['./location.component.scss', '../style-base/style-base.component.scss']
+  styleUrls: ['./location.component.scss', '../base/base.component.scss']
 })
 export class LocationComponent implements OnInit {
   locationSuccess!: ApiLocationModel[];
