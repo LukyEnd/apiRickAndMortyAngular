@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ReadCharacterComponent } from './read-character.component';
 
 describe('ReadCharacterComponent', () => {
@@ -8,9 +7,9 @@ describe('ReadCharacterComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReadCharacterComponent ]
+      declarations: [ReadCharacterComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

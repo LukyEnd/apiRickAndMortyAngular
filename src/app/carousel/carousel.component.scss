@@ -1,17 +1,12 @@
-// body {
-//     display: grid;
-//     place-items: center;
-//     height: 100vh;
-// }
-
-#items-weapper {
-    width: 100%;
+.items-weapper {
+    width: 100vw;
 }
 
-#items {
+.items {
     margin-top: 50px;
     display: flex;
     overflow-x: hidden; //barra de passar ou apenas deixa imagens sem extender
+    overflow-y: hidden;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch; //Para funcionar em todos Navegadores
 }
@@ -19,7 +14,9 @@
 .item {
     flex: none;
     width: 100%;
-    height: 200px;
+    max-width: 100%;
+    height: 100%;
+    max-height: 300px;
     scroll-snap-align: start;
 }
 
@@ -30,39 +27,38 @@ img {
     animation-name: animacao;
     animation-duration: 20s;
     animation-iteration-count: infinite;
-
-    // background-size: 100%; //Utilizar 100% da imagem
-    // background-repeat: no-repeat; //nao repetir imagem
-    // background-attachment: fixed; //imagem fixa
-    // background-position: center; //imagem centralizada
 }
 
 @keyframes animacao {
     0% {
         margin-left: 0;
     }
-    20% {
+    15% {
         margin-left: 0;
     }
+
     25% {
         margin-left: -100%;
     }
-    45% {
+    40% {
         margin-left: -100%;
     }
+
     50% {
         margin-left: -200%;
     }
-    70% {
+    65% {
         margin-left: -200%;
     }
+
     75% {
         margin-left: -300%;
     }
-    95% {
+    90% {
         margin-left: -300%;
     }
+
     100% {
-        margin-left: -400%;
+        margin-left: 0;
     }
 }

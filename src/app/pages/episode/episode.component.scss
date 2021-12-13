@@ -1,7 +1,7 @@
 .container,
 .title,
 .footer {
-    background-image: url("../../image/rick3.jpg"); //Imagem de fundo na div secundaria
+    background-image: url("../../../assets/image/rick3.jpg"); //Imagem de fundo na div secundaria
 }
 
 .ngfor {
@@ -9,6 +9,4 @@
     border: 2px solid black;
     width: 100%; //Tamanho dos Card Horizontalmente fixos
     max-width: 250px;
-    // min-height: 300px; //Tamanho minimo dos Cars Verticalmente fixos
-    // max-height: 600px; //Tamanho maximo dos Cars Verticalmente fixos
 }

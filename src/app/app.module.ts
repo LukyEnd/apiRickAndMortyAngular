@@ -6,7 +6,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './buttons/footer/footer.component';
 import { HeaderComponent } from './buttons/header/header.component';
 import { CharacterComponent } from './pages/character/character.component';
 import { ReadCharacterComponent } from './pages/character/read-character/read-character.component';
@@ -28,7 +27,6 @@ import { CarouselComponent } from './carousel/carousel.component';
     ReadEpisodeComponent,
     ReadLocationComponent,
     HeaderComponent,
-    FooterComponent,
     StyleBaseComponent,
     CarouselComponent
   ],
