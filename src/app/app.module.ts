@@ -15,6 +15,7 @@ import { ReadEpisodeComponent } from './pages/episode/read-episode/read-episode.
 import { LocationComponent } from './pages/location/location.component';
 import { ReadLocationComponent } from './pages/location/read-location/read-location.component';
 import { StyleBaseComponent } from './pages/base/base.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { StyleBaseComponent } from './pages/base/base.component';
     ReadLocationComponent,
     HeaderComponent,
     FooterComponent,
-    StyleBaseComponent
+    StyleBaseComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
