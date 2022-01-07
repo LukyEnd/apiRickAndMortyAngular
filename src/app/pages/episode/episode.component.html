@@ -8,10 +8,14 @@
                 <h2>Ep. {{episode.name}}</h2>
             </li>
             <li><strong>ID: </strong>{{episode.id}}</li>
-            <li><strong>Data de Lançamento: </strong>{{episode.air_date}}???</li>
+            <li><strong>Data de Lançamento: </strong>{{episode.air_date}}</li>
             <li><strong>Numero do Ep.: </strong>{{episode.episode}}</li>
             <!-- <p><a href={{episode.characters}}>{{episode.characters}}</a></p> -->
-            <li><strong>URL do Ep.: </strong><a [href]="episode.url">{{episode.url}}</a></li>
+
+            <li class="link"><a href="episode/info"><button (click)="openDialog(episode)">Link</button></a></li>
+
+            <!-- <button (click)="openDialog(episode)"></button> -->
+
             <li><strong>Data de Criação: </strong>{{episode.created | date: "dd/MM/yyyy"}}</li>
         </div>
     </div>

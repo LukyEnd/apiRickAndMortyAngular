@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResponseService } from 'src/app/service/character-info.service';
+import { ResponseService } from 'src/app/service/page-info.service';
 import { ApiCharacterModel } from '../../../model/character.model';
 
 @Component({
@@ -9,7 +9,9 @@ import { ApiCharacterModel } from '../../../model/character.model';
 })
 export class ReadCharacterComponent implements OnInit {
   charSuccess!: ApiCharacterModel;
+
   constructor(private resp: ResponseService) { }
+
   ngOnInit(): void {
     this.respCharacter()
   }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiEpisodeModel } from '../../model/episode.model';
-import { ResponseService } from '../../service/character-info.service';
+import { ResponseService } from '../../service/page-info.service';
 import { ServiceService } from '../../service/service.service';
+import { ReadEpisodeComponent } from './read-episode/read-episode.component';
 
 @Component({
   selector: 'app-episode',
@@ -53,5 +54,11 @@ export class EpisodeComponent implements OnInit {
       }, erro => {
         this.episodeError = erro
       })
+  }
+
+  openDialog(episode: any): any {
+    // this.open(ReadEpisodeComponent);
+    console.log('Dados do episodio', episode)
+    return this.resp.setEpisodeInfo(episode);
   }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ApiCharacterModel } from '../../model/character.model';
-import { ResponseService } from '../../service/character-info.service';
+import { ResponseService } from '../../service/page-info.service';
 import { ServiceService } from '../../service/service.service';
 import { ReadCharacterComponent } from './read-character/read-character.component';
 
