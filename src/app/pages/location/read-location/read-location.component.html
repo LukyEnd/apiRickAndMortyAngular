@@ -1,1 +1,9 @@
-<p>read-location works!</p>
+<div>
+	<li>
+		<h1>{{ locationInfo.name }}</h1>
+	</li>
+	<li><strong>ID: </strong>{{ locationInfo.id }}</li>
+	<li><strong>Tipo: </strong>{{ locationInfo.type }}</li>
+	<li><strong>Dimensão: </strong>{{ locationInfo.dimension }}</li>
+	<li><strong>Data de Criação: </strong>{{ locationInfo.created | date: 'dd/MM/yyyy' }}</li>
+</div>

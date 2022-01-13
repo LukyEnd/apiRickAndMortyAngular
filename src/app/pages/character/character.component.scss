@@ -1,11 +1,8 @@
-//Configuração de todas imagens, como borda
 img {
     border: 1px solid rgb(0, 0, 0);
     width: 100%;
     max-width: 150px;
 }
-
-//Configuração do botao ver mais
 .card-button {
     position: absolute;
     left: 97%;
@@ -13,8 +10,6 @@ img {
     margin-left: -110px;
     margin-top: -40px;
 }
-
-//Tamanho dos textos gerados no card
 .card-title,
 .card,
 .card-location,
@@ -26,7 +21,6 @@ img {
 .card-title {
     height: 35px;
 }
-
 .card {
     padding-top: 10px;
     height: 30px;
@@ -34,24 +28,19 @@ img {
 .card-location {
     height: 45px;
 }
-
 .card-location {
     height: 50px;
 }
-
 .container,
 .title,
 .footer {
     background-image: url("../../../assets/image/rick.jpg");
 }
-
 .ngfor {
     width: 100%;
     max-width: 350px;
     height: 250px;
 }
-
-//Efeito ao Colocar mause encima do botão OBS.: Apenas do VER MAIS
 .button-mast:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     background-color: rgba(31, 31, 31, 0.582);
@@ -63,6 +52,6 @@ img {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }

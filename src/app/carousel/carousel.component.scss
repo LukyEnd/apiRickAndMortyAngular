@@ -5,10 +5,9 @@
 .items {
     margin-top: 50px;
     display: flex;
-    overflow-x: hidden; //barra de passar ou apenas deixa imagens sem extender
-    overflow-y: hidden;
+    overflow: hidden;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; //Para funcionar em todos Navegadores
+    -webkit-overflow-scrolling: touch;
 }
 
 .item {

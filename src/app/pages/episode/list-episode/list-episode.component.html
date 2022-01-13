@@ -1,0 +1,8 @@
+<h1>Episódios Participados</h1>
+<div class="scroolable">
+	<div *ngFor="let episode of episodeList" class="ngfor">
+		<li>
+			<strong>Ep.: </strong><a [routerLink]="" (click)="openDialog(episode)">{{ episode }}</a>
+		</li>
+	</div>
+</div>

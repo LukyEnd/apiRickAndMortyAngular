@@ -7,38 +7,34 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './buttons/header/header.component';
+import { CarouselComponent } from './carousel/carousel.component';
+import { StyleBaseComponent } from './pages/base/base.component';
 import { CharacterComponent } from './pages/character/character.component';
 import { ReadCharacterComponent } from './pages/character/read-character/read-character.component';
 import { EpisodeComponent } from './pages/episode/episode.component';
+import { ListEpisodeComponent } from './pages/episode/list-episode/list-episode.component';
 import { ReadEpisodeComponent } from './pages/episode/read-episode/read-episode.component';
 import { LocationComponent } from './pages/location/location.component';
 import { ReadLocationComponent } from './pages/location/read-location/read-location.component';
-import { StyleBaseComponent } from './pages/base/base.component';
-import { CarouselComponent } from './carousel/carousel.component';
-
+import { ListCharacterComponent } from './pages/character/list-character/list-character.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CharacterComponent,
-    EpisodeComponent,
-    LocationComponent,
-    ReadCharacterComponent,
-    ReadEpisodeComponent,
-    ReadLocationComponent,
-    HeaderComponent,
-    StyleBaseComponent,
-    CarouselComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatCardModule,
-    MatDialogModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		CharacterComponent,
+		EpisodeComponent,
+		LocationComponent,
+		ReadCharacterComponent,
+		ReadEpisodeComponent,
+		ReadLocationComponent,
+		HeaderComponent,
+		StyleBaseComponent,
+		CarouselComponent,
+		ListEpisodeComponent,
+		ListCharacterComponent,
+	],
+	imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatCardModule, MatDialogModule],
+	providers: [],
+	bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

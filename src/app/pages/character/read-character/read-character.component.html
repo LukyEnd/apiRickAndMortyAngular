@@ -1,19 +1,48 @@
-<div>
-        <mat-card-title><strong>{{charSuccess.name}}</strong></mat-card-title>
-        <mat-card-subtitle><strong>ID: </strong>{{charSuccess.id}}</mat-card-subtitle>
-        <mat-card-subtitle><strong>Estado: </strong>{{charSuccess.status}}</mat-card-subtitle>
-        <mat-card-subtitle><strong>Espécie: </strong>{{charSuccess.species}}</mat-card-subtitle>
-        <mat-card-subtitle><strong>Tipo: </strong>{{charSuccess.type}}</mat-card-subtitle>
-        <mat-card-subtitle><strong>Gênero: </strong>{{charSuccess.gender}}</mat-card-subtitle>
-        <mat-card-subtitle><strong>Lugar de Origem: </strong>{{charSuccess.origin.name}}</mat-card-subtitle>
-        <mat-card-subtitle><strong>Link {{charSuccess.origin.name}}: </strong><a
-                        [href]="charSuccess.origin.url">{{charSuccess.origin.url}}</a></mat-card-subtitle>
-        <mat-card-subtitle><strong>Localização Atual: </strong>{{charSuccess.location.name}}</mat-card-subtitle>
-        <mat-card-subtitle><strong>Link {{charSuccess.location.name}}: </strong><a
-                        [href]="charSuccess.location.url">{{charSuccess.location.url}}</a></mat-card-subtitle>
-        <!-- <mat-card-subtitle>{{charSuccess.episode}}</mat-card-subtitle> -->
-        <!-- <mat-card-subtitle>{{charSuccess.url}}</mat-card-subtitle> -->
-        <mat-card-subtitle><strong>Data de Criação: </strong>{{charSuccess.created | date: "dd/MM/yyyy"}}
-        </mat-card-subtitle>
-        <img [src]="charSuccess.image">
+<div class="scroolable">
+	<li>
+		<h1>
+			<strong>{{ charSuccess.name }}</strong>
+		</h1>
+	</li>
+	<li>
+		ID: <strong>{{ charSuccess.id }}</strong>
+	</li>
+	<li>
+		Estado: <strong>{{ charSuccess.status }}</strong>
+	</li>
+	<li>
+		Espécie: <strong>{{ charSuccess.species }}</strong>
+	</li>
+	<li>
+		Tipo: <strong>{{ charSuccess.type }}</strong>
+	</li>
+	<li>
+		Gênero: <strong>{{ charSuccess.gender }}</strong>
+	</li>
+	<li>
+		Lugar de Origem:<strong>{{ charSuccess.origin.name }} </strong>
+	</li>
+	<li>
+		Link {{ charSuccess.origin.name }}:
+		<strong><a [routerLink]="" (click)="openDialog(charSuccess.origin.url)">{{ charSuccess.origin.url
+				}}</a></strong>
+	</li>
+	<li>
+		Localização Atual: <strong>{{ charSuccess.location.name }}</strong>
+	</li>
+	<li>
+		Link {{ charSuccess.location.name }}:
+		<strong><a [routerLink]="" (click)="openDialog(charSuccess.location.url)">{{ charSuccess.location.url
+				}}</a></strong>
+	</li>
+	<li>
+		Data de Criação: <strong>{{ charSuccess.created | date: 'dd/MM/yyyy' }}</strong>
+	</li>
+	<li>
+		Ep. Participados por {{ charSuccess.name }}:
+		<strong><a [routerLink]="" (click)="openList(charSuccess.episode)">LISTA...</a></strong>
+	</li>
+	<li>
+		<img [src]="charSuccess.image" />
+	</li>
 </div>

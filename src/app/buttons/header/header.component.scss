@@ -1,9 +1,8 @@
 .header {
     background-color: #000000de;
     display: flex;
-    flex-direction: row; //Determina como os itens sao alinhados no container, horizontal ou vertical
-    justify-content: space-evenly; //Definir alinhamento dos itens que ficarao na linha, No README tem todos
-    //fixar div botao
+    flex-direction: row; 
+    justify-content: space-evenly;
     position: fixed;
     z-index: 999;
     left: 0%;

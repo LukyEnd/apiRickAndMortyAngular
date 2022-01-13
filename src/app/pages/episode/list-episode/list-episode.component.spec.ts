@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ReadLocationComponent } from './read-location.component';
+import { ListEpisodeComponent } from './list-episode.component';
 
-describe('ReadLocationComponent', () => {
-	let component: ReadLocationComponent;
-	let fixture: ComponentFixture<ReadLocationComponent>;
+describe('ListEpisodeComponent', () => {
+	let component: ListEpisodeComponent;
+	let fixture: ComponentFixture<ListEpisodeComponent>;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [ReadLocationComponent],
+			declarations: [ListEpisodeComponent],
 		}).compileComponents();
 	});
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(ReadLocationComponent);
+		fixture = TestBed.createComponent(ListEpisodeComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});
