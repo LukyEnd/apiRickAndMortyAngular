@@ -2,18 +2,25 @@
   "name": "api-rick",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
+  },
+  "engines": {
+    "node": "14.17.6",
+    "npm": "6.14.15"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
     "@angular/cdk": "^12.2.13",
+    "@angular/cli": "~12.2.8",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
+    "@angular/compiler-cli": "~12.2.0",
     "@angular/core": "~12.2.0",
     "@angular/forms": "~12.2.0",
     "@angular/localize": "~12.2.0",
@@ -23,8 +30,11 @@
     "@angular/router": "~12.2.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "bootstrap": "^4.5.0",
+    "express": "^4.17.2",
+    "path": "^0.12.7",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
+    "typescript": "~4.3.5",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -40,5 +50,17 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.3.5"
-  }
+  },
+  "description": "Este projeto foi gerado com [Angular CLI] versão 12.2.8.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukyEnd/apiRickAndMortyAngular.git"
+  },
+  "author": "Lucas Sanches",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukyEnd/apiRickAndMortyAngular/issues"
+  },
+  "homepage": "https://github.com/LukyEnd/apiRickAndMortyAngular#readme"
 }
