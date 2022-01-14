@@ -3,43 +3,25 @@ img {
     width: 100%;
     max-width: 150px;
 }
-.card-button {
-    position: absolute;
-    left: 97%;
-    top: 85%;
-    margin-left: -110px;
-    margin-top: -40px;
-}
-.card-title,
-.card,
-.card-location,
-.card-location {
-    border: 0ch;
+mat-card {
     width: 100%;
-    max-width: 150px;
-}
-.card-title {
-    height: 35px;
-}
-.card {
-    padding-top: 10px;
-    height: 30px;
-}
-.card-location {
-    height: 45px;
-}
-.card-location {
-    height: 50px;
+    width: 400px;
+    min-height: 220px;
 }
 .container,
 .title,
 .footer {
-    background-image: url("../../../assets/image/rick.jpg");
+    background-image: url("../../../assets/image/1.jpg");
 }
-.ngfor {
-    width: 100%;
-    max-width: 350px;
-    height: 250px;
+.card-button {
+    position: absolute;
+    left: 97%;
+    top: 90%;
+    margin-left: -110px;
+    margin-top: -40px;
+}
+.card-title{
+    padding-bottom: 10px;
 }
 .button-mast:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);

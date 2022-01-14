@@ -1,9 +1,12 @@
-<div>
+<div class="scroolable" *ngIf="isValid">
 	<li>
-		<h1>{{ episodeInfo.name }}</h1>
+		<h1 class="nameEpisode"><strong>{{ episodeInfo.name }}</strong></h1>
 	</li>
 	<li><strong>ID: </strong>{{ episodeInfo.id }}</li>
-	<li><strong>Numero do Ep.: </strong>{{ episodeInfo.episode }}</li>
-	<li><strong>Data de Criação: </strong>{{ episodeInfo.air_date }}</li>
+	<li><strong>Numero do Ep.: </strong>{{ episodeInfo.episode | episodeFormat}}</li>
+	<li><strong>Data de Criação: </strong>{{ episodeInfo.air_date | translatorsMonth}}</li>
 	<li><strong>Data de Lançamento: </strong>{{ episodeInfo.created | date: 'dd/MM/yyyy' }}</li>
+</div>
+<div *ngIf="!isValid">
+	<h2>Desculpe, Informação Desconhecida</h2>
 </div>

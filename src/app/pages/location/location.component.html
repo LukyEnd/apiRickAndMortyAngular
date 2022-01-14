@@ -5,20 +5,20 @@
 	<div class="container">
 		<div *ngFor="let location of locationSuccess" class="ngfor">
 			<li>
-				<h2>{{ location.name }}</h2>
+				<h2><strong> Localização {{ location.name }}</strong></h2>
 			</li>
-			<li><b>ID: </b>{{ location.id }}</li>
-			<li><b>Tipo: </b>{{ location.type }}</li>
-			<li><b>Dimensão: </b>{{ location.dimension }}</li>
+			<li><strong>ID: </strong>{{ location.id }}</li>
+			<li><strong>Tipo: </strong>{{ location.type | translatorsBr }}</li>
+			<li><strong>Dimensão: </strong>{{ location.dimension | translatorsBr}}</li>
 			<li>
-				<strong>Residentes da/do {{ location.name }}: </strong><a [routerLink]=""
-					(click)="openList(location.residents)">LISTA...</a>
+				<strong>Lista de Residentes da/do {{ location.name }}: </strong><a [routerLink]=""
+					(click)="openList(location.residents)"> Ver...</a>
 			</li>
-			<li><b>Data de Criação: </b>{{ location.created | date: 'dd/MM/yyyy' }}</li>
+			<li><strong>Data de Criação: </strong>{{ location.created | date: 'dd/MM/yyyy' }}</li>
 		</div>
 	</div>
 	<div class="footer">
-		<button (click)="pagePrevInfo()" class="page-next">Anterior</button>
-		<button (click)="pageNextInfo()" class="page-prev">Proxima</button>
+		<button (click)="pagePrevInfo()" *ngIf="buttonPrevNull" class="page-next">Anterior</button>
+		<button (click)="pageNextInfo()" *ngIf="buttonNextNull" class="page-prev">Proxima</button>
 	</div>
 </div>

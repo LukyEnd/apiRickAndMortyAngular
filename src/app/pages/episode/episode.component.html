@@ -5,20 +5,20 @@
 	<div class="container">
 		<div *ngFor="let episode of episodeSuccess" class="ngfor">
 			<li>
-				<h2>Ep. {{ episode.name }}</h2>
+				<h2><strong>Episódio {{ episode.name }}</strong></h2>
 			</li>
 			<li><strong>ID: </strong>{{ episode.id }}</li>
 			<li><strong>Data de Lançamento: </strong>{{ episode.air_date }}</li>
-			<li><strong>Numero do Ep.: </strong>{{ episode.episode }}</li>
+			<li><strong>Numero do Ep.: </strong>{{ episode.episode | episodeFormat}}</li>
 			<li>
-				<strong>Participantes do Ep. {{ episode.episode }}: </strong><a [routerLink]=""
-					(click)="openList(episode.characters)">LISTA...</a>
+				<strong>Lista de Participantes desse Ep.: </strong><a [routerLink]=""
+					(click)="openList(episode.characters)"> Ver...</a>
 			</li>
 			<li><strong>Data de Criação: </strong>{{ episode.created | date: 'dd/MM/yyyy' }}</li>
 		</div>
 	</div>
 	<div class="footer">
-		<button (click)="pagePrevInfo()" class="page-next">Anterior</button>
-		<button (click)="pageNextInfo()" class="page-prev">Proxima</button>
+		<button (click)="pagePrevInfo()" *ngIf="buttonPrevNull" class="page-next">Anterior</button>
+		<button (click)="pageNextInfo()" *ngIf="buttonNextNull" class="page-prev">Proxima</button>
 	</div>
 </div>

@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ServiceCharacterService } from 'src/app/service/service-character.service';
 import { ServiceLocationService } from 'src/app/service/service-location.service';
 import { ServicePageInfoService } from 'src/app/service/service-page-info.service';
+import { environment } from 'src/environments/environment.prod';
 import { ApiLocationModel } from '../../service/model/location.model';
 import { ListCharacterComponent } from '../character/list-character/list-character.component';
 
@@ -15,6 +16,9 @@ export class LocationComponent implements OnInit {
 	locationSuccess!: ApiLocationModel[];
 	locationError!: string;
 	currentUrl!: string;
+
+	buttonPrevNull: boolean = false;
+	buttonNextNull: boolean = true;
 
 	constructor(
 		private serv: ServiceLocationService,
@@ -31,7 +35,7 @@ export class LocationComponent implements OnInit {
 		this.serv.apiLocationInfo().subscribe(
 			(data) => {
 				this.locationSuccess = data;
-				this.currentUrl = 'https://rickandmortyapi.com/api/location';
+				this.currentUrl = `${environment.url}location`;
 			},
 			(error) => {
 				this.locationError = error;
@@ -39,11 +43,19 @@ export class LocationComponent implements OnInit {
 		);
 	}
 
-	pageNextInfo() {
+	pagePrevInfo() {
 		this.resp.apiPageInfo(this.currentUrl).subscribe(
 			(pageInfo) => {
-				this.currentUrl = pageInfo.next;
-				this.serv.buttonPageLocation(pageInfo.next).subscribe((data) => {
+				let index = pageInfo.prev.indexOf('page=');
+				let id = pageInfo.prev.substring(index + 5);
+				if (pageInfo.prev == null || id == '1') {
+					this.buttonPrevNull = false;
+					this.currentUrl = `${environment.url}location`;
+				} else {
+					this.buttonNextNull = true;
+					this.currentUrl = pageInfo.prev;
+				}
+				this.serv.buttonPageLocation(pageInfo.prev).subscribe((data) => {
 					this.locationSuccess = data;
 				});
 			},
@@ -53,11 +65,19 @@ export class LocationComponent implements OnInit {
 		);
 	}
 
-	pagePrevInfo() {
+	pageNextInfo() {
 		this.resp.apiPageInfo(this.currentUrl).subscribe(
 			(pageInfo) => {
-				this.currentUrl = pageInfo.prev;
-				this.serv.buttonPageLocation(pageInfo.prev).subscribe((data) => {
+				let index = pageInfo.next.indexOf('page=');
+				let id = pageInfo.next.substring(index + 5);
+				if (pageInfo.next == null || id == `${pageInfo.pages}`) {
+					this.currentUrl = pageInfo.next;
+					this.buttonNextNull = false;
+				} else {
+					this.buttonPrevNull = true;
+					this.currentUrl = pageInfo.next;
+				}
+				this.serv.buttonPageLocation(pageInfo.next).subscribe((data) => {
 					this.locationSuccess = data;
 				});
 			},

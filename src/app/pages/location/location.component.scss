@@ -1,15 +1,12 @@
 .container,
 .title,
 .footer {
-    background-image: url("../../../assets/image/rick3.webp");
+    background-image: url("../../../assets/image/3.jpg");
 }
 .ngfor {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.800);
     border: 2px solid black;
     width: 100%;
-    max-width: 250px;
+    max-width: 320px;
     height: 300px;
-}
-.link {
-    word-wrap: break-word;
 }

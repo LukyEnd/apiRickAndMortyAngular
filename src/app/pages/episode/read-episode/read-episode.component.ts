@@ -18,6 +18,8 @@ export class ReadEpisodeComponent implements OnInit {
 
 	dateUrl!: ApiCharacterModel;
 
+	isValid!: boolean
+
 	constructor(
 		private serv: ServiceEpisodeService,
 		private activatedRoute: ActivatedRoute,
@@ -32,6 +34,11 @@ export class ReadEpisodeComponent implements OnInit {
 
 	respEpisode() {
 		this.episodeInfo = this.serv.getEpidoseInfo();
+		if (this.episodeInfo.id <= 999) {
+			this.isValid = true
+		} else {
+			this.isValid = false
+		}
 	}
 
 	dataUrlEpisode() {

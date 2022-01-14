@@ -1,8 +1,9 @@
-<h1>Personagens Participantes</h1>
+<h1>Personagens</h1>
 <div class="scroolable">
 	<div *ngFor="let character of charList" class="ngfor">
 		<li>
-			<strong>Participantes: </strong><a [routerLink]="" (click)="openDialog(character)">{{ character }}</a>
+			<strong>N° {{ character | throughStringCharacter }}: </strong><a [routerLink]=""
+				(click)="openDialog(character)"> Mais Informações...</a>
 		</li>
 	</div>
 </div>

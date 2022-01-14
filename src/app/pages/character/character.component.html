@@ -9,25 +9,29 @@
 					<mat-card-title class="card-title">
 						{{ character.name }}
 					</mat-card-title>
-					<mat-card-subtitle class="card">
-						<strong>{{ character.status }} - {{ character.species }}</strong>
+					<mat-card-subtitle>
+						<strong>{{ character.status | translatorsBr}} - {{ character.species |
+							translatorsBr}}</strong>
 					</mat-card-subtitle>
-					<mat-card-subtitle class="card-location">
-						Ultima Localiação: <strong>{{ character.location.name }}</strong>
+					<mat-card-subtitle>
+						<strong>Gênero: </strong>{{ character.gender | translatorsBr}}
 					</mat-card-subtitle>
-					<mat-card-subtitle class="card-seen">
-						Visto pela primeira Vez: <strong>{{ character.gender }}</strong>
+					<mat-card-subtitle>
+						<strong>Origem: </strong>{{ character.origin.name | translatorsBr}}
 					</mat-card-subtitle>
-					<img mat-card-lg-image loading="lazy" [alt]="character.id" [src]="character.image" />
+					<mat-card-subtitle>
+						<strong>Localização Atual: </strong>{{ character.location.name | translatorsBr}}
+					</mat-card-subtitle>
+					<img mat-card-lg-image loading="lazy" [alt]="" [src]="character.image" />
 				</mat-card-title-group>
 				<mat-card-content class="card-button">
-					<button mat-button class="button-mast" (click)="openDialog(character)">Ver Mais...</button>
+					<button mat-button class="button-mast" (click)="openDialog(character)"> Ver Mais...</button>
 				</mat-card-content>
 			</mat-card>
 		</div>
 	</div>
 	<div class="footer">
-		<button (click)="pagePrevInfo()" class="page-next">Anterior</button>
-		<button (click)="pageNextInfo()" class="page-prev">Proxima</button>
+		<button (click)="pagePrevInfo()" *ngIf="buttonPrevNull" class="page-next">Anterior</button>
+		<button (click)="pageNextInfo()" *ngIf="buttonNextNull" class="page-prev">Proxima</button>
 	</div>
 </div>

@@ -1,9 +1,12 @@
-<div>
+<div class="scroolable" *ngIf="isValid">
 	<li>
 		<h1>{{ locationInfo.name }}</h1>
 	</li>
 	<li><strong>ID: </strong>{{ locationInfo.id }}</li>
-	<li><strong>Tipo: </strong>{{ locationInfo.type }}</li>
-	<li><strong>Dimensão: </strong>{{ locationInfo.dimension }}</li>
+	<li><strong>Tipo: </strong>{{ locationInfo.type | translatorsBr}}</li>
+	<li><strong>Dimensão: </strong>{{ locationInfo.dimension | translatorsBr}}</li>
 	<li><strong>Data de Criação: </strong>{{ locationInfo.created | date: 'dd/MM/yyyy' }}</li>
+</div>
+<div *ngIf="!isValid">
+	<h2>Desculpe, Informação Desconhecida</h2>
 </div>

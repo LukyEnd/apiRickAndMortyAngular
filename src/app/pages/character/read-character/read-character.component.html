@@ -5,44 +5,36 @@
 		</h1>
 	</li>
 	<li>
-		ID: <strong>{{ charSuccess.id }}</strong>
-	</li>
-	<li>
-		Estado: <strong>{{ charSuccess.status }}</strong>
-	</li>
-	<li>
-		Espécie: <strong>{{ charSuccess.species }}</strong>
-	</li>
-	<li>
-		Tipo: <strong>{{ charSuccess.type }}</strong>
-	</li>
-	<li>
-		Gênero: <strong>{{ charSuccess.gender }}</strong>
-	</li>
-	<li>
-		Lugar de Origem:<strong>{{ charSuccess.origin.name }} </strong>
-	</li>
-	<li>
-		Link {{ charSuccess.origin.name }}:
-		<strong><a [routerLink]="" (click)="openDialog(charSuccess.origin.url)">{{ charSuccess.origin.url
-				}}</a></strong>
-	</li>
-	<li>
-		Localização Atual: <strong>{{ charSuccess.location.name }}</strong>
-	</li>
-	<li>
-		Link {{ charSuccess.location.name }}:
-		<strong><a [routerLink]="" (click)="openDialog(charSuccess.location.url)">{{ charSuccess.location.url
-				}}</a></strong>
-	</li>
-	<li>
-		Data de Criação: <strong>{{ charSuccess.created | date: 'dd/MM/yyyy' }}</strong>
-	</li>
-	<li>
-		Ep. Participados por {{ charSuccess.name }}:
-		<strong><a [routerLink]="" (click)="openList(charSuccess.episode)">LISTA...</a></strong>
-	</li>
-	<li>
 		<img [src]="charSuccess.image" />
+	</li>
+	<li>
+		<strong>ID: </strong> {{ charSuccess.id }}
+	</li>
+	<li>
+		<strong>Estado: </strong>{{ charSuccess.status | translatorsBr}}
+	</li>
+	<li>
+		<strong>Espécie: </strong>{{ charSuccess.species | translatorsBr}}
+	</li>
+	<li>
+		<strong>Tipo: </strong>{{ charSuccess.type | translatorsBr}}
+	</li>
+	<li>
+		<strong>Gênero: </strong>{{ charSuccess.gender | translatorsBr}}
+	</li>
+	<li>
+		<strong>Lugar de Origem: </strong> {{ charSuccess.origin.name | translatorsBr}} - <a [routerLink]=""
+			(click)="openDialog(charSuccess.origin.url)"> Mais Informações...</a>
+	</li>
+	<li>
+		<strong> Localização Atual: </strong> {{ charSuccess.location.name | translatorsBr}} - <a [routerLink]=""
+			(click)="openDialog(charSuccess.location.url)"> Mais Informações...</a>
+	</li>
+	<li>
+		<strong> Data de Criação: </strong>{{ charSuccess.created | date: 'dd/MM/yyyy' }}
+	</li>
+	<li class="ult">
+		<strong> Lista de Ep. Participados por {{ charSuccess.name }}: </strong><a [routerLink]=""
+			(click)="openList(charSuccess.episode)"> Ver...</a>
 	</li>
 </div>

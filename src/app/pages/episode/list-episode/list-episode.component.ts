@@ -20,7 +20,7 @@ export class ListEpisodeComponent implements OnInit {
 	}
 
 	respListLocation() {
-		this.episodeList = this.serv.getEpisodeList();
+		this.episodeList = this.serv.getEpisodeList()
 	}
 
 	openDialog(episodeUrl: string) {
