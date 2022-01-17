@@ -1,4 +1,4 @@
-# ApiRick
+# ApiRick 
 
 Este projeto foi gerado com [Angular CLI] versão 12.2.8.
 
