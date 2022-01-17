@@ -5,14 +5,14 @@
 	<div class="container">
 		<div *ngFor="let location of locationSuccess" class="ngfor">
 			<li>
-				<h2><strong> Localização {{ location.name }}</strong></h2>
+				<h2><strong>{{ location.name }}</strong></h2>
 			</li>
 			<li><strong>ID: </strong>{{ location.id }}</li>
 			<li><strong>Tipo: </strong>{{ location.type | translatorsBr }}</li>
 			<li><strong>Dimensão: </strong>{{ location.dimension | translatorsBr}}</li>
 			<li>
-				<strong>Lista de Residentes da/do {{ location.name }}: </strong><a [routerLink]=""
-					(click)="openList(location.residents)"> Ver...</a>
+				<strong>Lista de Residentes: </strong><a [routerLink]=""
+					(click)="openList(location.residents)"> Abrir...</a>
 			</li>
 			<li><strong>Data de Criação: </strong>{{ location.created | date: 'dd/MM/yyyy' }}</li>
 		</div>

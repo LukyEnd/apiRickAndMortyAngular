@@ -11,7 +11,7 @@ import { ReadCharacterComponent } from '../read-character/read-character.compone
 })
 export class ListCharacterComponent implements OnInit {
 	charList!: [];
-	dateUrl!: ApiCharacterModel;
+	charUrlDate!: ApiCharacterModel;
 
 	constructor(private serv: ServiceCharacterService, private dialog: MatDialog) {}
 
@@ -26,9 +26,9 @@ export class ListCharacterComponent implements OnInit {
 		let index = characterURL.indexOf('/character/');
 		let id = characterURL.substring(index + 11);
 		this.serv.characterUrl(id).subscribe((data) => {
-			this.dateUrl = data;
+			this.charUrlDate = data;
 			this.dialog.open(ReadCharacterComponent);
-			return this.serv.setCharacterInfo(this.dateUrl);
+			return this.serv.setCharacterInfo(this.charUrlDate);
 		});
 	}
 }

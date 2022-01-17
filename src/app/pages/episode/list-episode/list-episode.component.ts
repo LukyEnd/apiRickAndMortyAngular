@@ -11,7 +11,7 @@ import { ReadEpisodeComponent } from '../read-episode/read-episode.component';
 })
 export class ListEpisodeComponent implements OnInit {
 	episodeList!: [];
-	dateUrl!: ApiEpisodeModel;
+	episodeUrlDate!: ApiEpisodeModel;
 
 	constructor(private serv: ServiceEpisodeService, private dialog: MatDialog) {}
 
@@ -20,16 +20,16 @@ export class ListEpisodeComponent implements OnInit {
 	}
 
 	respListLocation() {
-		this.episodeList = this.serv.getEpisodeList()
+		this.episodeList = this.serv.getEpisodeList();
 	}
 
 	openDialog(episodeUrl: string) {
 		let index = episodeUrl.indexOf('/episode/');
 		let id = episodeUrl.substring(index + 9);
 		this.serv.episodeUrl(id).subscribe((data) => {
-			this.dateUrl = data;
+			this.episodeUrlDate = data;
 			this.dialog.open(ReadEpisodeComponent);
-			return this.serv.setEpisodeInfo(this.dateUrl);
+			return this.serv.setEpisodeInfo(this.episodeUrlDate);
 		});
 	}
 }

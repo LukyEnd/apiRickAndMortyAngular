@@ -16,15 +16,15 @@ export class ReadEpisodeComponent implements OnInit {
 	episodeInfo!: ApiEpisodeModel;
 	episodeInfoError!: string;
 
-	dateUrl!: ApiCharacterModel;
+	charUrlDate!: ApiCharacterModel;
 
-	isValid!: boolean
+	isValid!: boolean;
 
 	constructor(
 		private serv: ServiceEpisodeService,
 		private activatedRoute: ActivatedRoute,
 		private resp: ServiceCharacterService,
-		private dialog: MatDialog,
+		private dialog: MatDialog
 	) {}
 
 	ngOnInit(): void {
@@ -35,9 +35,9 @@ export class ReadEpisodeComponent implements OnInit {
 	respEpisode() {
 		this.episodeInfo = this.serv.getEpidoseInfo();
 		if (this.episodeInfo.id <= 999) {
-			this.isValid = true
+			this.isValid = true;
 		} else {
-			this.isValid = false
+			this.isValid = false;
 		}
 	}
 
@@ -57,9 +57,9 @@ export class ReadEpisodeComponent implements OnInit {
 		let index = characterURL.indexOf('/character/');
 		let id = characterURL.substring(index + 11);
 		this.resp.characterUrl(id).subscribe((data) => {
-			this.dateUrl = data;
+			this.charUrlDate = data;
 			this.dialog.open(ReadCharacterComponent);
-			return this.resp.setCharacterInfo(this.dateUrl);
+			return this.resp.setCharacterInfo(this.charUrlDate);
 		});
 	}
 }

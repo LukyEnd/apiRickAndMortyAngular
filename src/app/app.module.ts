@@ -15,6 +15,7 @@ import { ReadCharacterComponent } from './pages/character/read-character/read-ch
 import { EpisodeComponent } from './pages/episode/episode.component';
 import { ListEpisodeComponent } from './pages/episode/list-episode/list-episode.component';
 import { ReadEpisodeComponent } from './pages/episode/read-episode/read-episode.component';
+import { ErrorComponent } from './pages/error/error.component';
 import { LocationComponent } from './pages/location/location.component';
 import { ReadLocationComponent } from './pages/location/read-location/read-location.component';
 import { EpisodeFormatPipe } from './pipe/episode-format.pipe';
@@ -22,7 +23,6 @@ import { ThroughStringCharacterPipe } from './pipe/through-string-character.pipe
 import { ThroughStringEpisodePipe } from './pipe/through-string-episode.pipe';
 import { TranslatorsBrPipe } from './pipe/translators-br.pipe';
 import { TranslatorsMonthPipe } from './pipe/translators-month.pipe';
-import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
 	declarations: [
@@ -43,7 +43,7 @@ import { ErrorComponent } from './pages/error/error.component';
 		EpisodeFormatPipe,
 		TranslatorsBrPipe,
 		TranslatorsMonthPipe,
-  ErrorComponent,
+		ErrorComponent,
 	],
 	imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatCardModule, MatDialogModule],
 	providers: [],

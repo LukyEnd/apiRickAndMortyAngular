@@ -13,7 +13,7 @@ export class ReadLocationComponent implements OnInit {
 	locationInfoError!: string;
 	locationResidents!: [];
 
-	isValid!: boolean
+	isValid!: boolean;
 
 	constructor(
 		private serv: ServiceLocationService,
@@ -29,9 +29,9 @@ export class ReadLocationComponent implements OnInit {
 	respLocation() {
 		this.locationInfo = this.servLocation.getLocationInfo();
 		if (this.locationInfo.id <= 999) {
-			this.isValid = true
+			this.isValid = true;
 		} else {
-			this.isValid = false
+			this.isValid = false;
 		}
 	}
 

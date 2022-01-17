@@ -16,7 +16,7 @@ import { ReadLocationComponent } from '../../location/read-location/read-locatio
 export class ReadCharacterComponent implements OnInit {
 	charSuccess!: ApiCharacterModel;
 
-	dateUrl!: ApiLocationModel;
+	locationUrlDate!: ApiLocationModel;
 
 	constructor(
 		private serv: ServiceCharacterService,
@@ -37,9 +37,9 @@ export class ReadCharacterComponent implements OnInit {
 		let index = locationUrl.indexOf('/location/');
 		let id = locationUrl.substring(index + 10);
 		this.servLocation.locationUrl(id).subscribe((data) => {
-			this.dateUrl = data;
+			this.locationUrlDate = data;
 			this.dialog.open(ReadLocationComponent);
-			return this.servLocation.setLocationInfo(this.dateUrl);
+			return this.servLocation.setLocationInfo(this.locationUrlDate);
 		});
 	}
 

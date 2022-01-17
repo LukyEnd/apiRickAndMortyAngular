@@ -2,7 +2,8 @@
 <div class="scroolable">
 	<div *ngFor="let episode of episodeList" class="ngfor">
 		<li>
-			<strong>Ep. {{ episode | throughStringEpisode}}: </strong><a [routerLink]="" (click)="openDialog(episode)"> Mais Informações...</a>
+			<strong>Ep. {{ episode | throughStringEpisode}}: </strong><a [routerLink]="" (click)="openDialog(episode)">
+				Mais Informações...</a>
 		</li>
 	</div>
 </div>
